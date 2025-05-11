@@ -19,6 +19,18 @@ Creators can connect with their audience, monetize content, and earn more throug
 Users can financially and socially invest in their favorite influencers. The native token, $ARENA, powers the ecosystem.
 `;
 
+// Responses for human feelings
+const feelingsResponses = {
+  happy: "That’s awesome to hear! What’s got you in such a great mood?",
+  sad: "I’m sorry you’re feeling sad. Want to share what’s on your mind? I’m here for you.",
+  angry: "Sounds like you’re pretty upset. Care to vent or talk it out?",
+  anxious: "Feeling anxious can be tough. Want to tell me more? Maybe we can sort through it together.",
+  excited: "Woohoo, your excitement is contagious! What’s got you so pumped?",
+  tired: "Feeling tired, huh? Maybe a quick chat about something fun can perk you up!",
+  confused: "No worries, confusion happens! Want to explain what’s puzzling you?",
+  scared: "I’m here for you. What’s got you feeling scared? Let’s talk it through."
+};
+
 // Function to add a message to the chat box
 function addMessage(text, isUser = false) {
   const messageDiv = document.createElement('div');
@@ -49,6 +61,7 @@ async function fetchCryptoPrice(tokenName) {
     sol: 'solana',
     arena: 'the-arena', // $ARENA token (The Arena)
     $arena: 'the-arena'
+    
   };
 
   const tokenId = tokenMap[tokenName.toLowerCase()];
